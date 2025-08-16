@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>USI School</title>
+    <link rel="stylesheet" href="{% static 'admin/css/main.css' %}">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <div class="lang-button"></div>
+            <div class="lang-button"></div>
+            <div class="lang-button"></div>
+        </div>
+        <nav class="header-nav">
+            <a href="{% url 'stud' %}">الطلاب</a>
+            <a href="{% url 'touch' %}">المعلمين</a>
+            <a href="{% url 'base' %}">الرئيسية</a>
+        </nav>
+        <div class="logo">
+            <div class="logo-box"></div>
+            <span>US</span>
+        </div>
+    </header>
+    
+    

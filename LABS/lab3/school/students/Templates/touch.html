@@ -1,0 +1,32 @@
+{% include "header.html" %}
+{% block content %}
+{% block pageTitle %}
+<h1>Teachers </h1>
+{% endblock %}
+<h2 style="text-align:center;">قائمة المدرسين</h2>
+    <table>
+        <tr>
+            <th>الاسم</th>
+            <th>التخصص</th>
+            <th>البريد الإلكتروني</th>
+            <th>الهاتف</th>
+            <th>العنوان</th>
+            <th>تاريخ التعيين</th>
+        </tr>
+        {% for teacher in teachers %}
+        <tr>
+            <td>{{ teacher.name }}</td>
+            <td>{{ teacher.subject }}</td>
+            <td>{{ teacher.email }}</td>
+            <td>{{ teacher.phone }}</td>
+            <td>{{ teacher.address }}</td>
+            <td>{{ teacher.hire_date }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="6">لا يوجد مدرسين</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+{% include "footer.html" %}
